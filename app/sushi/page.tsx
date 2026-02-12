@@ -31,7 +31,7 @@ export default function SushiPage() {
           value={preferences}
           onChange={(e) => setPreferences(e.target.value)}
           placeholder="e.g., I love spicy tuna rolls, salmon nigiri, cucumber rolls..."
-          className="w-full h-48 p-4 rounded-xl text-black text-base"
+          className="w-full h-48 p-4 rounded-xl text-black text-base bg-white"
         />
 
         <div className="space-y-3 pt-4">

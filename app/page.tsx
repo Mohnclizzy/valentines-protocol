@@ -30,7 +30,7 @@ export default function Home() {
                 else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
               }
             }}
-            className="mx-auto mt-2 w-48 p-2 rounded text-black"
+            className="mx-auto mt-2 w-48 p-2 rounded text-black bg-white"
             placeholder="yes"
           />
           <div>
