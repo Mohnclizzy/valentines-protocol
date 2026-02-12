@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation"
 
 export default function Home() {
   const [started, setStarted] = useState(false)
+  const [answer, setAnswer] = useState("")
   const router = useRouter()
 
   return (
@@ -17,17 +18,32 @@ export default function Home() {
           className="text-center space-y-6"
         >
           <h1 className="text-4xl font-bold">
-            Initializing Valentine Optimization Protocol...
+            Will you be my Valentines?
           </h1>
-          <p className="text-pink-400">
-            Scanning emotional variables...
-          </p>
-          <button
-            onClick={() => setStarted(true)}
-            className="bg-pink-500 px-6 py-3 rounded-xl hover:bg-pink-400 transition"
-          >
-            ACCESS SYSTEM
-          </button>
+          <p className="text-pink-400">Type "yes" to enter.</p>
+          <input
+            value={answer}
+            onChange={(e) => setAnswer(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                if (answer.trim().toLowerCase() === "yes") setStarted(true)
+                else alert('Please type "yes" to continue')
+              }
+            }}
+            className="mx-auto mt-2 w-48 p-2 rounded text-black"
+            placeholder="yes"
+          />
+          <div>
+            <button
+              onClick={() => {
+                if (answer.trim().toLowerCase() === "yes") setStarted(true)
+                else alert('Please type "yes" to continue')
+              }}
+              className="bg-pink-500 px-6 py-3 rounded-xl hover:bg-pink-400 transition"
+            >
+              SUBMIT
+            </button>
+          </div>
         </motion.div>
       ) : (
         <motion.div
