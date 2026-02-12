@@ -37,28 +37,28 @@ export default function SushiPage() {
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full bg-gradient-to-r from-pink-600 to-pink-400 py-6 px-4 text-center shadow-lg"
+        className="w-full bg-gradient-to-r from-pink-600 to-pink-400 py-16 px-4 text-center shadow-2xl"
       >
-        <p className="text-sm text-pink-100 mb-2">💕 Time until our anniversary 💕</p>
-        <div className="flex justify-center gap-8 flex-wrap">
+        <p className="text-2xl text-pink-100 mb-6 font-bold">💕 Time until our anniversary 💕</p>
+        <div className="flex justify-center gap-12 flex-wrap">
           <div className="text-center">
-            <div className="text-5xl font-bold text-white">{countdown.days}</div>
-            <div className="text-sm text-pink-100">Days</div>
+            <div className="text-8xl font-black text-white">{countdown.days}</div>
+            <div className="text-2xl text-pink-100 font-semibold mt-2">Days</div>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold text-white">{countdown.hours}</div>
-            <div className="text-sm text-pink-100">Hours</div>
+            <div className="text-8xl font-black text-white">{countdown.hours}</div>
+            <div className="text-2xl text-pink-100 font-semibold mt-2">Hours</div>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold text-white">{countdown.minutes}</div>
-            <div className="text-sm text-pink-100">Minutes</div>
+            <div className="text-8xl font-black text-white">{countdown.minutes}</div>
+            <div className="text-2xl text-pink-100 font-semibold mt-2">Minutes</div>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold text-white">{countdown.seconds}</div>
-            <div className="text-sm text-pink-100">Seconds</div>
+            <div className="text-8xl font-black text-white">{countdown.seconds}</div>
+            <div className="text-2xl text-pink-100 font-semibold mt-2">Seconds</div>
           </div>
         </div>
-        <p className="text-pink-100 text-sm mt-3">March 1st will be here soon! 🎉</p>
+        <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon! 🎉</p>
       </motion.div>
       <div className="flex-1 flex items-center justify-center">
         <motion.div
