@@ -27,7 +27,7 @@ export default function Home() {
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 if (answer.trim().toLowerCase() === "yes") setStarted(true)
-                else alert('Please type "yes" to continue')
+                else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
               }
             }}
             className="mx-auto mt-2 w-48 p-2 rounded text-black"
@@ -37,7 +37,7 @@ export default function Home() {
             <button
               onClick={() => {
                 if (answer.trim().toLowerCase() === "yes") setStarted(true)
-                else alert('Please type "yes" to continue')
+                else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
               }}
               className="bg-pink-500 px-6 py-3 rounded-xl hover:bg-pink-400 transition"
             >
