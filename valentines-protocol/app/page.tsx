@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
   const [started, setStarted] = useState(false)
+  const router = useRouter()
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-black text-white">
@@ -40,13 +42,13 @@ export default function Home() {
             Make yo pick finnashawty
           </p>
           <div className="grid grid-cols-3 gap-4">
-            <button className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
+            <button onClick={() => router.push("/sushi")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
               Sushi 🍣
             </button>
-            <button className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
+            <button onClick={() => router.push("/cooking")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
               Cooking Together 👨‍🍳
             </button>
-            <button className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
+            <button onClick={() => router.push("/pho")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
               Pho 🍜
             </button>
           </div>
