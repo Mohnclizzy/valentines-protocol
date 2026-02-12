@@ -31,7 +31,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white pt-96">
+    <>
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,8 @@ export default function Home() {
         </div>
         <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon! 🎉</p>
       </motion.div>
-      <div className="flex-1 flex items-center justify-center">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-80">
+        <div className="flex-1 flex items-center justify-center">
         {!started ? (
           <motion.div
             initial={{ opacity: 0 }}
