@@ -21,7 +21,7 @@ export default function SushiPage() {
         className="text-center space-y-6 max-w-2xl"
       >
         <h1 className="text-4xl font-bold text-pink-400">
-          Sushi Preferences 🍣
+          Sushi Preferences 
         </h1>
         <p className="text-lg text-gray-300">
           Tell me about your favorite sushi and preferences!
@@ -39,7 +39,7 @@ export default function SushiPage() {
             onClick={handleSubmit}
             className="w-full bg-pink-500 hover:bg-pink-400 transition px-6 py-3 rounded-xl font-bold text-lg"
           >
-            Save Preferences ❤️
+            Save Preferences 
           </button>
           <button
             onClick={() => router.push("/")}
