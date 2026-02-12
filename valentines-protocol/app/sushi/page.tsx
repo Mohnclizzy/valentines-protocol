@@ -33,11 +33,11 @@ export default function SushiPage() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white pt-96">
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full bg-gradient-to-r from-pink-600 to-pink-400 py-16 px-4 text-center shadow-2xl"
+        className="fixed top-0 left-0 right-0 w-full bg-gradient-to-r from-pink-600 to-pink-400 py-16 px-4 text-center shadow-2xl z-50"
       >
         <p className="text-2xl text-pink-100 mb-6 font-bold">💕 Time until our anniversary 💕</p>
         <div className="flex justify-center gap-12 flex-wrap">
