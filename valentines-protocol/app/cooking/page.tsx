@@ -34,7 +34,7 @@ export default function CookingPage() {
         animate={{ opacity: 1, y: 0 }}
         className="fixed top-0 left-0 right-0 w-full bg-gradient-to-r from-pink-600 to-pink-400 py-16 px-4 text-center shadow-2xl z-50"
       >
-        <p className="text-2xl text-pink-100 mb-6 font-bold">💕 Time until our anniversary 💕</p>
+        <p className="text-2xl text-pink-100 mb-6 font-bold">Time until our anniversary</p>
         <div className="flex justify-center gap-12 flex-wrap">
           <div className="text-center">
             <div className="text-8xl font-black text-white">{countdown.days}</div>
@@ -53,7 +53,7 @@ export default function CookingPage() {
             <div className="text-2xl text-pink-100 font-semibold mt-2">Seconds</div>
           </div>
         </div>
-        <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon! 🎉</p>
+        <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
       <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-80">
         <div className="flex-1 flex items-center justify-center">
@@ -63,7 +63,7 @@ export default function CookingPage() {
           className="text-center space-y-8"
         >
           <h1 className="text-4xl font-bold text-pink-400">
-            Cooking 👨‍🍳
+            Cooking
           </h1>
           <p className="text-lg text-gray-300">
             Which sounds better to you?
