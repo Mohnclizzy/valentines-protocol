@@ -31,56 +31,82 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-black text-white">
-      {!started ? (
+    <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
+      {started && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center space-y-6"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="w-full bg-gradient-to-r from-pink-600 to-pink-400 py-6 px-4 text-center shadow-lg"
         >
-          <h1 className="text-4xl font-bold">
-            Will you be my Valentines?
-          </h1>
-          <p className="text-pink-400">Type "yes" to enter.</p>
-          <input
-            value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                if (answer.trim().toLowerCase() === "yes") setStarted(true)
-                else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
-              }
-            }}
-            className="mx-auto mt-2 w-48 p-2 rounded text-black bg-white"
-            placeholder="yes"
-          />
-          <div>
-            <button
-              onClick={() => {
-                if (answer.trim().toLowerCase() === "yes") setStarted(true)
-                else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
-              }}
-              className="bg-pink-500 px-6 py-3 rounded-xl hover:bg-pink-400 transition"
-            >
-              SUBMIT
-            </button>
+          <p className="text-sm text-pink-100 mb-2">💕 Time until our anniversary 💕</p>
+          <div className="flex justify-center gap-8 flex-wrap">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-white">{countdown.days}</div>
+              <div className="text-sm text-pink-100">Days</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-white">{countdown.hours}</div>
+              <div className="text-sm text-pink-100">Hours</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-white">{countdown.minutes}</div>
+              <div className="text-sm text-pink-100">Minutes</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-white">{countdown.seconds}</div>
+              <div className="text-sm text-pink-100">Seconds</div>
+            </div>
           </div>
+          <p className="text-pink-100 text-sm mt-3">March 1st will be here soon! 🎉</p>
         </motion.div>
-      ) : (
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="text-center space-y-6"
-        >
-          <h2 className="text-3xl font-bold text-pink-400">
-            Welcome, Agent Girlfriend
-          </h2>
-          <div className="text-lg text-gray-300 space-y-2">
-            <p>Only {countdown.days} days, {countdown.hours} hours, {countdown.minutes} minutes, and {countdown.seconds} seconds until our 1 year anniversary (March 1st)! ❤️</p>
-          </div>
-          <p>
-            Make yo pick finnashawty
-          </p>
+      )}
+      <div className="flex-1 flex items-center justify-center">
+        {!started ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center space-y-6"
+          >
+            <h1 className="text-4xl font-bold">
+              Will you be my Valentines?
+            </h1>
+            <p className="text-pink-400">Type "yes" to enter.</p>
+            <input
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  if (answer.trim().toLowerCase() === "yes") setStarted(true)
+                  else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
+                }
+              }}
+              className="mx-auto mt-2 w-48 p-2 rounded text-black bg-white"
+              placeholder="yes"
+            />
+            <div>
+              <button
+                onClick={() => {
+                  if (answer.trim().toLowerCase() === "yes") setStarted(true)
+                  else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
+                }}
+                className="bg-pink-500 px-6 py-3 rounded-xl hover:bg-pink-400 transition"
+              >
+                SUBMIT
+              </button>
+            </div>
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="text-center space-y-6"
+          >
+            <h2 className="text-3xl font-bold text-pink-400">
+              Welcome, Agent Girlfriend
+            </h2>
+            <p>
+              Make yo pick finnashawty
+            </p>
           <div className="grid grid-cols-3 gap-4">
             <button onClick={() => router.push("/sushi")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
               Sushi 🍣
