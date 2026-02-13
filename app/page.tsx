@@ -57,7 +57,7 @@ export default function Home() {
         </div>
         <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-24 sm:mt-40 md:mt-80">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-40 sm:mt-56 md:mt-80">
         <div className="flex-1 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0 }}

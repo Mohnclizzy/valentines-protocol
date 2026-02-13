@@ -115,8 +115,8 @@ export default function SubmitPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-3 py-6 sm:px-4 sm:py-8 md:px-6 md:py-12">
-        <div className="w-full max-w-3xl space-y-4 sm:space-y-6 md:space-y-8">
+      <main className="flex flex-col items-center bg-black text-white mt-32 sm:mt-40 md:mt-56 px-3 py-8 sm:px-4 sm:py-12 md:px-6 md:py-16">
+        <div className="w-full max-w-3xl space-y-6 sm:space-y-8 md:space-y-10">
           {submitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}

@@ -55,11 +55,11 @@ export default function MenuPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-<main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-3 py-6 sm:px-4 sm:py-8 md:px-6 md:py-12">
+      <main className="flex flex-col items-center bg-black text-white mt-32 sm:mt-40 md:mt-56 px-3 py-8 sm:px-4 sm:py-12 md:px-6 md:py-16">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="text-center space-y-4 sm:space-y-6 md:space-y-8 max-w-2xl w-full"
+          className="text-center space-y-6 sm:space-y-8 md:space-y-10 max-w-2xl w-full"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-pink-400 mt-2">
             Pick Your Dinner
