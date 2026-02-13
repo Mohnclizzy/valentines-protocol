@@ -44,13 +44,7 @@ export default function PicnicPage() {
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed top-0 left-0 right-0 w-full py-1 sm:py-3 md:py-8 px-4 text-center shadow-2xl z-50"
-        style={{
-          backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/IMG_4975.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 20%',
-          backgroundAttachment: 'fixed'
-        }}
+        className="fixed top-0 left-0 right-0 w-full py-1 sm:py-3 md:py-8 px-4 text-center shadow-2xl z-50 bg-gray-900"
       >
         <p className="text-xs sm:text-lg md:text-2xl text-pink-100 mb-3 sm:mb-4 md:mb-6 font-bold">YOU KNOW WHAT THE FAHHHH GOING ON!!</p>
         <div className="flex justify-center gap-2 sm:gap-6 md:gap-12 flex-wrap">
@@ -73,6 +67,11 @@ export default function PicnicPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
+      <img
+        src="/IMG_4975.jpg"
+        alt="cat"
+        className="absolute bottom-20 right-4 w-20 h-20 sm:w-24 sm:h-24 rounded-lg object-cover opacity-90 shadow-lg"
+      />
       <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-3 py-6 sm:px-4 sm:py-8 md:px-6 md:py-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

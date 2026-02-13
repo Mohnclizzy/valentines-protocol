@@ -34,13 +34,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed top-0 left-0 right-0 w-full py-4 sm:py-8 md:py-16 px-4 text-center shadow-2xl z-50"
-        style={{
-          backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/IMG_4975.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 20%',
-          backgroundAttachment: 'fixed'
-        }}
+        className="fixed top-0 left-0 right-0 w-full py-4 sm:py-8 md:py-16 px-4 text-center shadow-2xl z-50 bg-gray-900"
       >
         <p className="text-lg sm:text-xl md:text-2xl text-pink-100 mb-6 font-bold">YOU KNOW WHAT THE FAHHHH GOING ON!!</p>
         <div className="flex justify-center gap-6 sm:gap-8 md:gap-12 flex-wrap">
