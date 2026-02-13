@@ -48,23 +48,23 @@ export default function SushiPage() {
           backgroundAttachment: 'fixed'
         }}
       >
-        <p className="text-2xl text-pink-100 mb-6 font-bold">YOU KNOW WHAT THE FAHHHH GOING ON!!</p>
-        <div className="flex justify-center gap-12 flex-wrap">
+        <p className="text-lg sm:text-xl md:text-2xl text-pink-100 mb-6 font-bold">YOU KNOW WHAT THE FAHHHH GOING ON!!</p>
+        <div className="flex justify-center gap-6 sm:gap-8 md:gap-12 flex-wrap">
           <div className="text-center">
-            <div className="text-8xl font-black text-white">{countdown.days}</div>
-            <div className="text-2xl text-pink-100 font-semibold mt-2">Days</div>
+            <div className="text-5xl sm:text-6xl md:text-8xl font-black text-white">{countdown.days}</div>
+            <div className="text-base sm:text-lg md:text-2xl text-pink-100 font-semibold mt-2">Days</div>
           </div>
           <div className="text-center">
-            <div className="text-8xl font-black text-white">{countdown.hours}</div>
-            <div className="text-2xl text-pink-100 font-semibold mt-2">Hours</div>
+            <div className="text-5xl sm:text-6xl md:text-8xl font-black text-white">{countdown.hours}</div>
+            <div className="text-base sm:text-lg md:text-2xl text-pink-100 font-semibold mt-2">Hours</div>
           </div>
           <div className="text-center">
-            <div className="text-8xl font-black text-white">{countdown.minutes}</div>
-            <div className="text-2xl text-pink-100 font-semibold mt-2">Minutes</div>
+            <div className="text-5xl sm:text-6xl md:text-8xl font-black text-white">{countdown.minutes}</div>
+            <div className="text-base sm:text-lg md:text-2xl text-pink-100 font-semibold mt-2">Minutes</div>
           </div>
           <div className="text-center">
-            <div className="text-8xl font-black text-white">{countdown.seconds}</div>
-            <div className="text-2xl text-pink-100 font-semibold mt-2">Seconds</div>
+            <div className="text-5xl sm:text-6xl md:text-8xl font-black text-white">{countdown.seconds}</div>
+            <div className="text-base sm:text-lg md:text-2xl text-pink-100 font-semibold mt-2">Seconds</div>
           </div>
         </div>
         <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon!</p>
