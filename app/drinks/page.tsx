@@ -57,7 +57,7 @@ export default function DrinksPage() {
         </div>
         <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-40">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
         <div className="flex-1 flex items-center justify-center w-full px-4">
           {!submitted ? (
             <motion.div
