@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
-export default function ItineraryPage() {
+export default function MenuPage() {
   const router = useRouter()
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
@@ -60,76 +60,44 @@ export default function ItineraryPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-center space-y-8 max-w-3xl"
+            className="text-center space-y-6"
           >
-            <h1 className="text-5xl font-bold text-pink-400">
-              Valentine's Day
+            <h1 className="text-4xl font-bold">
+              Pick Your Dinner
             </h1>
-            <p className="text-2xl text-gray-200">
-              Here's what I have planned for us
-            </p>
+            <p className="text-pink-400 text-xl">What should we do for dinner?</p>
 
-            <div className="space-y-6 text-left bg-gray-900 p-8 rounded-2xl">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+            <div className="grid grid-cols-3 gap-6 mt-8">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="border-l-4 border-pink-500 pl-6"
+                onClick={() => router.push("/sushi")}
+                className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
               >
-                <p className="text-xl font-bold text-pink-300">Breakfast</p>
-                <p className="text-lg text-gray-300">Kerbey Lane Cafe</p>
-              </motion.div>
+                Sushi 🍣
+              </motion.button>
 
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="border-l-4 border-pink-500 pl-6"
+                onClick={() => router.push("/cooking")}
+                className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
               >
-                <p className="text-xl font-bold text-pink-300">da arts</p>
-                <p className="text-lg text-gray-300">Blanton Art Museum - once we're satisfied with breakfast</p>
-              </motion.div>
+                Cooking 👨‍🍳
+              </motion.button>
 
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="border-l-4 border-pink-500 pl-6"
+                onClick={() => router.push("/picnic")}
+                className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
               >
-                <p className="text-xl font-bold text-pink-300">Relax & Recharge</p>
-                <p className="text-lg text-gray-300">A peaceful nap to recharge</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
-                className="border-l-4 border-pink-500 pl-6"
-              >
-                <p className="text-xl font-bold text-pink-300">Adventure</p>
-                <p className="text-lg text-gray-300">Spontaneous fun - wherever the moment takes us</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 }}
-                className="border-l-4 border-pink-500 pl-6"
-              >
-                <p className="text-xl font-bold text-pink-300">Dinner</p>
-                <p className="text-lg text-gray-300">You'll get to choose what we do for dinner</p>
-              </motion.div>
+                Picnic 🧺
+              </motion.button>
             </div>
-
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              onClick={() => router.push("/menu")}
-              className="bg-pink-500 hover:bg-pink-400 transition px-8 py-4 rounded-xl font-bold text-xl mt-8"
-            >
-              Pick Dinner
-            </motion.button>
           </motion.div>
         </div>
       </main>

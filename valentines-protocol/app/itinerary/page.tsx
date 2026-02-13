@@ -125,7 +125,7 @@ export default function ItineraryPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              onClick={() => router.push("/")}
+              onClick={() => router.push("/menu")}
               className="bg-pink-500 hover:bg-pink-400 transition px-8 py-4 rounded-xl font-bold text-xl mt-8"
             >
               Pick Dinner
