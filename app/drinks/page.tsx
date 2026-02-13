@@ -59,7 +59,7 @@ export default function DrinksPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex flex-col items-center bg-black text-white mt-32 sm:mt-40 md:mt-56 px-3 py-8 sm:px-4 sm:py-12 md:px-6 md:py-16">
+      <main className="flex min-h-screen flex-col items-center bg-black text-white mt-40 sm:mt-56 md:mt-80 px-3 py-8 sm:px-4 sm:py-12 md:px-6 md:py-16 pb-20 sm:pb-24 md:pb-32">
         <div className="w-full max-w-2xl space-y-6 sm:space-y-8 md:space-y-10">
           {!submitted ? (
             <motion.div

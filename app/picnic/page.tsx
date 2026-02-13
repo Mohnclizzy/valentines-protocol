@@ -72,7 +72,7 @@ export default function PicnicPage() {
         alt="cat"
         className="absolute bottom-20 right-4 w-20 h-20 sm:w-24 sm:h-24 rounded-lg object-cover opacity-90 shadow-lg"
       />
-      <main className="flex flex-col items-center bg-black text-white mt-32 sm:mt-40 md:mt-56 px-3 py-8 sm:px-4 sm:py-12 md:px-6 md:py-16">
+      <main className="flex min-h-screen flex-col items-center bg-black text-white mt-40 sm:mt-56 md:mt-80 px-3 py-8 sm:px-4 sm:py-12 md:px-6 md:py-16 pb-20 sm:pb-24 md:pb-32">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
