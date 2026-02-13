@@ -85,7 +85,7 @@ export default function Home() {
             <div>
               <button
                 onClick={() => {
-                  if (answer.trim().toLowerCase() === "yes") setStarted(true)
+                  if (answer.trim().toLowerCase() === "yes") router.push("/itinerary")
                   else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
                 }}
                 className="bg-pink-500 px-6 py-3 rounded-xl hover:bg-pink-400 transition"
@@ -94,31 +94,7 @@ export default function Home() {
               </button>
             </div>
           </motion.div>
-        ) : (
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="text-center space-y-6"
-          >
-            <h2 className="text-3xl font-bold text-pink-400">
-              Hello my gorgeous wonderful beautiful pretty cute awesome hot sexy lady
-            </h2>
-            <p>
-              Make yo pick finnashawty
-            </p>
-            <div className="grid grid-cols-3 gap-4">
-              <button onClick={() => router.push("/sushi")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
-                Sushi 🍣
-              </button>
-              <button onClick={() => router.push("/cooking")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
-                Cooking Together 👨‍🍳
-              </button>
-              <button onClick={() => router.push("/picnic")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
-                Picnic
-              </button>
-            </div>
-          </motion.div>
-        )}
+        ) : (}
       </div>
       </main>
     </>

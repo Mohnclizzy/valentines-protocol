@@ -85,7 +85,7 @@ export default function Home() {
             <div>
               <button
                 onClick={() => {
-                  if (answer.trim().toLowerCase() === "yes") setStarted(true)
+                  if (answer.trim().toLowerCase() === "yes") router.push("/itinerary")
                   else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
                 }}
                 className="bg-pink-500 px-6 py-3 rounded-xl hover:bg-pink-400 transition"
