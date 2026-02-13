@@ -132,7 +132,7 @@ export default function CookingTogetherPage() {
             <textarea
               value={baking}
               onChange={(e) => setBaking(e.target.value)}
-              placeholder="e.g., cookies, brownies, cake, bread..."
+              placeholder=""
               className="w-full h-48 p-4 rounded-xl text-black text-base bg-white"
             />
 

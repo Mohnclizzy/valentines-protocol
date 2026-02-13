@@ -132,7 +132,7 @@ export default function PhoPage() {
             <textarea
               value={preferences}
               onChange={(e) => setPreferences(e.target.value)}
-              placeholder="e.g., beef broth, chicken, loads of noodles, fresh herbs..."
+              placeholder=""
               className="w-full h-48 p-4 rounded-xl text-black text-base bg-white"
             />
 

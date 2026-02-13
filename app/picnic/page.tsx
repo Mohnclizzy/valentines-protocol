@@ -132,7 +132,7 @@ export default function PicnicPage() {
             <textarea
               value={preferences}
               onChange={(e) => setPreferences(e.target.value)}
-              placeholder="e.g., blanket, wine, snacks, music, sunset views..."
+              placeholder=""
               className="w-full h-48 p-4 rounded-xl text-black text-base bg-white"
             />
 

@@ -132,7 +132,7 @@ export default function SushiPage() {
           <textarea
             value={preferences}
             onChange={(e) => setPreferences(e.target.value)}
-            placeholder="e.g., I love spicy tuna rolls, salmon nigiri, cucumber rolls..."
+            placeholder=""
             className="w-full h-48 p-4 rounded-xl text-black text-base bg-white"
           />
 
