@@ -40,7 +40,7 @@ export default function SushiSweetTreatsPage() {
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed top-0 left-0 right-0 w-full py-16 px-4 text-center shadow-2xl z-50"
+        className="fixed top-0 left-0 right-0 w-full py-4 sm:py-8 md:py-16 px-4 text-center shadow-2xl z-50"
         style={{
           backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/IMG_4975.jpg')",
           backgroundSize: 'cover',
@@ -69,7 +69,7 @@ export default function SushiSweetTreatsPage() {
         </div>
         <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-80">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-24 sm:mt-40 md:mt-80">
         <div className="flex-1 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
