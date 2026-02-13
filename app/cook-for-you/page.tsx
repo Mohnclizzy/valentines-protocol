@@ -40,7 +40,7 @@ export default function CookForYouPage() {
         animate={{ opacity: 1, y: 0 }}
         className="fixed top-0 left-0 right-0 w-full bg-gradient-to-r from-pink-600 to-pink-400 py-16 px-4 text-center shadow-2xl z-50"
       >
-        <p className="text-2xl text-pink-100 mb-6 font-bold">Time until our anniversary</p>
+        <p className="text-2xl text-pink-100 mb-6 font-bold">YOU KNOW WHAT THE FAHHHH GOING ON!!</p>
         <div className="flex justify-center gap-12 flex-wrap">
           <div className="text-center">
             <div className="text-8xl font-black text-white">{countdown.days}</div>
