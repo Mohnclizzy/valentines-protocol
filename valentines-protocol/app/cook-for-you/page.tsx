@@ -96,7 +96,7 @@ export default function CookForYouPage() {
               onClick={handleSubmit}
               className="w-full bg-pink-500 hover:bg-pink-400 transition px-6 py-3 rounded-xl font-bold text-lg"
             >
-              Submit Suggestions ❤️
+              Submit Suggestions
             </button>
             <button
               onClick={() => router.push("/cooking")}
