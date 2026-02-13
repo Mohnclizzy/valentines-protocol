@@ -113,8 +113,8 @@ export default function Home() {
               <button onClick={() => router.push("/cooking")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
                 Cooking Together 👨‍🍳
               </button>
-              <button onClick={() => router.push("/pho")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
-                Pho 🍜
+              <button onClick={() => router.push("/picnic")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
+                Picnic
               </button>
             </div>
           </motion.div>
