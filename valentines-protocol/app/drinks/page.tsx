@@ -67,7 +67,7 @@ export default function DrinksPage() {
             >
               <h1 className="text-4xl font-bold">But first...</h1>
               <p className="text-2xl text-pink-300">Would drinks interest you?</p>
-              <p className="text-gray-300 text-lg">Tell me what you'd like to drink, or if you can't decide, that's okay - I'll have a bottle of wine for us 🍷</p>
+              <p className="text-gray-300 text-lg">Tell me what you'd like to drink, or if you can't decide, that's okay - I'll have a bottle of wine for us</p>
               <textarea
                 value={drinkPreference}
                 onChange={(e) => setDrinkPreference(e.target.value)}

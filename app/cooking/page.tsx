@@ -77,7 +77,7 @@ export default function CookingPage() {
               onClick={() => router.push("/cook-for-you")}
               className="bg-pink-500 hover:bg-pink-400 transition px-8 py-8 rounded-xl text-xl font-bold transform hover:scale-105"
             >
-              <span className="text-2xl block mb-2">👨‍🍳</span>
+              <span className="text-2xl block mb-2"></span>
               Let Me Cook For You
             </motion.button>
 
@@ -88,7 +88,7 @@ export default function CookingPage() {
               onClick={() => router.push("/cooking-together")}
               className="bg-pink-500 hover:bg-pink-400 transition px-8 py-8 rounded-xl text-xl font-bold transform hover:scale-105"
             >
-              <span className="text-2xl block mb-2">👩‍🍳👨‍🍳</span>
+              <span className="text-2xl block mb-2"></span>
               Cook Together
             </motion.button>
           </div>

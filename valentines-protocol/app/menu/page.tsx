@@ -75,7 +75,7 @@ export default function MenuPage() {
                 onClick={() => router.push("/sushi")}
                 className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
               >
-                Sushi 🍣
+                Sushi
               </motion.button>
 
               <motion.button
@@ -85,7 +85,7 @@ export default function MenuPage() {
                 onClick={() => router.push("/cooking")}
                 className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
               >
-                Cooking 👨‍🍳
+                Cooking
               </motion.button>
 
               <motion.button
@@ -95,7 +95,7 @@ export default function MenuPage() {
                 onClick={() => router.push("/picnic")}
                 className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
               >
-                Picnic 🧺
+                Picnic
               </motion.button>
             </div>
           </motion.div>
