@@ -11,7 +11,7 @@ export default function ItineraryPage() {
   useEffect(() => {
     const updateCountdown = () => {
       const now = new Date()
-      const target = new Date(2026, 2, 1)
+      const target = new Date(2026, 1, 14) // February 14th, 2026 - Valentine's Day
       const diff = target.getTime() - now.getTime()
       if (diff > 0) {
         setCountdown({
@@ -34,7 +34,7 @@ export default function ItineraryPage() {
         animate={{ opacity: 1, y: 0 }}
         className="fixed top-0 left-0 right-0 w-full bg-gradient-to-r from-pink-600 to-pink-400 py-16 px-4 text-center shadow-2xl z-50"
       >
-        <p className="text-2xl text-pink-100 mb-6 font-bold">Time until our anniversary</p>
+        <p className="text-2xl text-pink-100 mb-6 font-bold">Time until Valentine's Day</p>
         <div className="flex justify-center gap-12 flex-wrap">
           <div className="text-center">
             <div className="text-8xl font-black text-white">{countdown.days}</div>
@@ -53,7 +53,7 @@ export default function ItineraryPage() {
             <div className="text-2xl text-pink-100 font-semibold mt-2">Seconds</div>
           </div>
         </div>
-        <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon!</p>
+        <p className="text-pink-100 text-lg mt-6 font-bold">Valentine's Day is almost here!</p>
       </motion.div>
       <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-80">
         <div className="flex-1 flex items-center justify-center">
@@ -63,7 +63,7 @@ export default function ItineraryPage() {
             className="text-center space-y-8 max-w-3xl"
           >
             <h1 className="text-5xl font-bold text-pink-400">
-              Our Anniversary Day
+              Valentine's Day
             </h1>
             <p className="text-2xl text-gray-200">
               Here's what I have planned for us
@@ -86,7 +86,7 @@ export default function ItineraryPage() {
                 transition={{ delay: 0.2 }}
                 className="border-l-4 border-pink-500 pl-6"
               >
-                <p className="text-xl font-bold text-pink-300">Culture & Art</p>
+                <p className="text-xl font-bold text-pink-300">da arts</p>
                 <p className="text-lg text-gray-300">Blanton Art Museum - once we're satisfied with breakfast</p>
               </motion.div>
 
