@@ -3,9 +3,11 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { useFormData } from "@/app/context/FormContext"
 
 export default function CookForYouPage() {
   const router = useRouter()
+  const { updateFormData } = useFormData()
   const [suggestions, setSuggestions] = useState("")
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
@@ -30,6 +32,10 @@ export default function CookForYouPage() {
 
   const handleSubmit = () => {
     console.log("Cooking suggestions:", suggestions)
+    updateFormData({
+      dinnerChoice: "Cook For You",
+      dinnerDetails: suggestions
+    })
     router.push("/cook-for-you/sweet-treats")
   }
 

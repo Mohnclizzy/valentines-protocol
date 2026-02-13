@@ -3,9 +3,11 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { useFormData } from "@/app/context/FormContext"
 
 export default function DrinksPage() {
   const router = useRouter()
+  const { updateFormData } = useFormData()
   const [drinkPreference, setDrinkPreference] = useState("")
   const [submitted, setSubmitted] = useState(false)
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
@@ -75,7 +77,10 @@ export default function DrinksPage() {
                 className="w-full h-48 p-4 rounded-xl text-black text-base bg-white"
               />
               <button
-                onClick={() => setSubmitted(true)}
+                onClick={() => {
+                  updateFormData({ drinkPreference })
+                  setSubmitted(true)
+                }}
                 className="bg-pink-500 px-8 py-3 rounded-xl hover:bg-pink-400 transition font-bold text-lg"
               >
                 Let's Move On

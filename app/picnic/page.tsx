@@ -3,9 +3,11 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { useFormData } from "@/app/context/FormContext"
 
 export default function PicnicPage() {
   const router = useRouter()
+  const { updateFormData } = useFormData()
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
   const [preferences, setPreferences] = useState("")
 
@@ -30,6 +32,10 @@ export default function PicnicPage() {
 
   const handleSubmit = () => {
     console.log("Picnic preferences:", preferences)
+    updateFormData({
+      dinnerChoice: "Picnic",
+      dinnerDetails: preferences
+    })
     router.push("/picnic/sweet-treats")
   }
 

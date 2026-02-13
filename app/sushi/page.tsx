@@ -3,9 +3,11 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { useFormData } from "@/app/context/FormContext"
 
 export default function SushiPage() {
   const router = useRouter()
+  const { updateFormData } = useFormData()
   const [preferences, setPreferences] = useState("")
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
@@ -29,7 +31,7 @@ export default function SushiPage() {
   }, [])
 
   const handleSubmit = () => {
-    console.log("Sushi preferences:", preferences)
+    updateFormData({ dinnerChoice: "Sushi", dinnerDetails: preferences })
     router.push("/sushi/sweet-treats")
   }
 
@@ -87,7 +89,7 @@ export default function SushiPage() {
               onClick={handleSubmit}
               className="w-full bg-pink-500 hover:bg-pink-400 transition px-6 py-3 rounded-xl font-bold text-lg"
             >
-              Save Preferences ❤️
+              Save Preferences
             </button>
             <button
               onClick={() => router.push("/")}

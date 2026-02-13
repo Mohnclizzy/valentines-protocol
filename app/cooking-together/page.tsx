@@ -3,9 +3,11 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { useFormData } from "@/app/context/FormContext"
 
 export default function CookingTogetherPage() {
   const router = useRouter()
+  const { updateFormData } = useFormData()
   const [baking, setBaking] = useState("")
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
@@ -29,7 +31,7 @@ export default function CookingTogetherPage() {
   }, [])
 
   const handleSubmit = () => {
-    console.log("Baking preferences:", baking)
+    updateFormData({ dinnerChoice: "Cooking Together", dinnerDetails: baking })
     router.push("/cooking-together/sweet-treats")
   }
 
