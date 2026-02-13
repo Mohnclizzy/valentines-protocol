@@ -38,7 +38,7 @@ export default function Home() {
         style={{
           backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/IMG_4975.jpg')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 20%',
           backgroundAttachment: 'fixed'
         }}
       >

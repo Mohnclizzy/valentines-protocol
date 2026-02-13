@@ -96,7 +96,7 @@ export default function SubmitPage() {
         style={{
           backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/IMG_4975.jpg')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 20%',
           backgroundAttachment: 'fixed'
         }}
       >
@@ -121,8 +121,8 @@ export default function SubmitPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex flex-col items-center justify-center bg-black text-white mt-8 sm:mt-24 md:mt-80 pb-8">
-        <div className="flex-1 flex items-center justify-center">
+      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-4 py-8">
+        <div className="w-full max-w-3xl">
           {submitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}

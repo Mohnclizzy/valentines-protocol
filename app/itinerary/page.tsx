@@ -36,7 +36,7 @@ export default function ItineraryPage() {
         style={{
           backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/IMG_4975.jpg')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 20%',
           backgroundAttachment: 'fixed'
         }}
       >
@@ -61,12 +61,11 @@ export default function ItineraryPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex flex-col items-center justify-center bg-black text-white mt-8 sm:mt-24 md:mt-80 pb-8">
-        <div className="flex-1 flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="text-center space-y-8 max-w-3xl"
+      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-4 py-8">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="text-center space-y-6 max-w-2xl w-full"
           >
             <h1 className="text-5xl font-bold text-pink-400">
               Valentine's Day
@@ -137,7 +136,6 @@ export default function ItineraryPage() {
               Pick Dinner
             </motion.button>
           </motion.div>
-        </div>
       </main>
     </>
   )
