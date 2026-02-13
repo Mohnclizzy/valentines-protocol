@@ -73,16 +73,16 @@ export default function PicnicPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-4 py-8">
+      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-3 py-6 sm:px-4 sm:py-8 md:px-6 md:py-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="text-center space-y-6 max-w-2xl w-full"
+          className="text-center space-y-4 sm:space-y-6 md:space-y-8 max-w-2xl w-full"
           >
-            <h1 className="text-4xl font-bold text-pink-400">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-pink-400 mt-2">
               Picnic Must-Haves
             </h1>
-            <p className="text-lg text-gray-300">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
               What are the must-have items or activities for our picnic?
             </p>
 
@@ -90,18 +90,18 @@ export default function PicnicPage() {
               value={preferences}
               onChange={(e) => setPreferences(e.target.value)}
               placeholder=""
-              className="w-full h-48 p-4 rounded-xl text-black text-base bg-white"
+              className="w-full h-40 sm:h-48 md:h-64 p-4 rounded-xl text-black text-base bg-white focus:outline-none focus:ring-2 focus:ring-pink-400"
             />
 
             <button
               onClick={handleSubmit}
-              className="w-full bg-pink-500 hover:bg-pink-400 transition px-6 py-3 rounded-xl font-bold text-lg"
+              className="w-full bg-pink-500 hover:bg-pink-400 transition px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl font-bold text-base sm:text-lg"
             >
               Save Preferences
             </button>
             <button
               onClick={() => router.push("/")}
-              className="w-full bg-gray-700 hover:bg-gray-600 transition px-6 py-3 rounded-xl"
+              className="w-full bg-gray-700 hover:bg-gray-600 transition px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl text-base sm:text-lg mb-4"
             >
               ← Back
             </button>

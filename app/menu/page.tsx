@@ -61,34 +61,34 @@ export default function MenuPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-4 py-8">
+<main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-3 py-6 sm:px-4 sm:py-8 md:px-6 md:py-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="text-center space-y-6 max-w-2xl w-full"
-          >
-            <h1 className="text-4xl font-bold">
-              Pick Your Dinner
-            </h1>
-            <p className="text-pink-400 text-xl">What should we do for dinner?</p>
+          className="text-center space-y-4 sm:space-y-6 md:space-y-8 max-w-2xl w-full"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-pink-400 mt-2">
+            Pick Your Dinner
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-pink-400 leading-relaxed">What should we do for dinner?</p>
 
-            <div className="grid grid-cols-3 gap-6 mt-8">
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                onClick={() => router.push("/sushi")}
-                className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
-              >
-                Sushi
-              </motion.button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-6">
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              onClick={() => router.push("/sushi")}
+              className="bg-pink-500 hover:bg-pink-400 transition px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-xl font-bold text-base sm:text-lg md:text-xl"
+            >
+              Sushi
+            </motion.button>
 
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                onClick={() => router.push("/cooking")}
-                className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              onClick={() => router.push("/cooking")}
+              className="bg-pink-500 hover:bg-pink-400 transition px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-xl font-bold text-base sm:text-lg md:text-xl"
               >
                 Cooking
               </motion.button>
@@ -98,7 +98,7 @@ export default function MenuPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
                 onClick={() => router.push("/picnic")}
-                className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
+                className="bg-pink-500 hover:bg-pink-400 transition px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-xl font-bold text-base sm:text-lg md:text-xl"
               >
                 Picnic
               </motion.button>

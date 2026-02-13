@@ -61,28 +61,27 @@ export default function CookingPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-4 py-8">
+      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-3 py-6 sm:px-4 sm:py-8 md:px-6 md:py-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="text-center space-y-8 w-full max-w-2xl"
+          className="text-center space-y-4 sm:space-y-6 md:space-y-8 w-full max-w-2xl"
         >
-          <h1 className="text-4xl font-bold text-pink-400">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-pink-400 mt-2">
             Cooking
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
             Which sounds better to you?
           </p>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mt-6">
             <motion.button
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               onClick={() => router.push("/cook-for-you")}
-              className="bg-pink-500 hover:bg-pink-400 transition px-8 py-8 rounded-xl text-xl font-bold transform hover:scale-105"
+              className="bg-pink-500 hover:bg-pink-400 transition px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-xl text-base sm:text-lg md:text-xl font-bold transform hover:scale-105"
             >
-              <span className="text-2xl block mb-2"></span>
               Let Me Cook For You
             </motion.button>
 
@@ -91,16 +90,15 @@ export default function CookingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               onClick={() => router.push("/cooking-together")}
-              className="bg-pink-500 hover:bg-pink-400 transition px-8 py-8 rounded-xl text-xl font-bold transform hover:scale-105"
+              className="bg-pink-500 hover:bg-pink-400 transition px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-xl text-base sm:text-lg md:text-xl font-bold transform hover:scale-105"
             >
-              <span className="text-2xl block mb-2"></span>
               Cook Together
             </motion.button>
           </div>
 
           <button
             onClick={() => router.push("/")}
-            className="mt-8 bg-gray-700 hover:bg-gray-600 transition px-6 py-3 rounded-xl text-sm"
+            className="w-full bg-gray-700 hover:bg-gray-600 transition px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl text-base sm:text-lg font-semibold mt-4 mb-4"
           >
             ← Back
           </button>

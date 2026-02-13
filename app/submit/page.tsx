@@ -121,16 +121,16 @@ export default function SubmitPage() {
         </div>
         <p className="text-pink-100 text-xs sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
-      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-4 py-8">
-        <div className="w-full max-w-3xl">
+      <main className="flex flex-col items-center bg-black text-white mt-20 sm:mt-28 md:mt-40 px-3 py-6 sm:px-4 sm:py-8 md:px-6 md:py-12">
+        <div className="w-full max-w-3xl space-y-4 sm:space-y-6 md:space-y-8">
           {submitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               className="text-center space-y-6 max-w-3xl px-6"
             >
-              <h1 className="text-6xl font-bold text-pink-400">I LOVE YOU</h1>
-              <div className="mt-8 text-center text-lg text-white leading-relaxed whitespace-pre-line max-w-2xl">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-pink-400 mb-4">I LOVE YOU</h1>
+              <div className="mt-6 sm:mt-8 text-center text-base sm:text-lg md:text-xl text-white leading-relaxed whitespace-pre-line max-w-2xl mx-auto px-2">
                 {`you got this way of leaning in
 like you're listening to the parts of me
 i barely say out loud,
