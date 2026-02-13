@@ -121,12 +121,31 @@ export default function SubmitPage() {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="text-center space-y-6"
+              className="text-center space-y-6 max-w-3xl px-6"
             >
               <h1 className="text-6xl font-bold text-pink-400">I LOVE YOU</h1>
+              <div className="mt-8 text-center text-lg text-white leading-relaxed whitespace-pre-line max-w-2xl">
+                {`you got this way of leaning in
+like you're listening to the parts of me
+i barely say out loud,
+and maybe that's what belonging is
+not a home,
+just two nervous hearts
+agreeing to be gentle.
+
+I used to search for softer places in the world.
+turns out
+they were growing in your hands
+the whole time
+folded up like old letters i never sent
+Our hands clasp, the sanctity of holiness
+All in your ribcage, all in your veins,
+And when our sweat mix to be the same
+I know we must be alive and sane`}
+              </div>
               <button
                 onClick={() => window.location.href = "/"}
-                className="bg-pink-500 px-8 py-3 rounded-xl hover:bg-pink-400 transition font-bold text-lg mt-8"
+                className="bg-pink-500 px-8 py-3 rounded-xl hover:bg-pink-400 transition font-bold text-lg mt-6"
               >
                 Start Over
               </button>

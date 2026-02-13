@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const updateCountdown = () => {
       const now = new Date()
-      const target = new Date(2026, 2, 1) // March 1st, 2026 - Our Anniversary
+      const target = new Date(2026, 2, 1) // March 1st, 2026
       const diff = target.getTime() - now.getTime()
 
       if (diff > 0) {
@@ -64,9 +64,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             className="text-center space-y-6"
           >
-            <h1 className="text-4xl font-bold">
-              Will you be my Valentines?
-            </h1>
+            <h1 className="text-4xl font-bold">Will you be my Valentines?</h1>
             <p className="text-pink-400">Type "yes" to enter.</p>
             <input
               value={answer}

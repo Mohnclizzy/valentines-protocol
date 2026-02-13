@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { useFormData } from "@/app/context/FormContext"
+import { useFormData } from "../../../app/context/FormContext"
 
 export default function PicnicPage() {
   const router = useRouter()
