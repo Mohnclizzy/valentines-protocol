@@ -123,10 +123,13 @@ export default function SubmitPage() {
               animate={{ opacity: 1, scale: 1 }}
               className="text-center space-y-6"
             >
-              <h1 className="text-5xl font-bold text-pink-400">Perfect!</h1>
-              <p className="text-2xl text-gray-200">I've saved everything you told me.</p>
-              <p className="text-xl text-gray-300">Come visit me when the timer hits 0, Kaylee.</p>
-              <p className="text-lg text-pink-300 mt-8">This is going to be the best day ever.</p>
+              <h1 className="text-6xl font-bold text-pink-400">I LOVE YOU</h1>
+              <button
+                onClick={() => window.location.href = "/"}
+                className="bg-pink-500 px-8 py-3 rounded-xl hover:bg-pink-400 transition font-bold text-lg mt-8"
+              >
+                Start Over
+              </button>
             </motion.div>
           ) : (
             <motion.div
