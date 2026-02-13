@@ -85,9 +85,7 @@ export default function CookingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              onClick={() => {
-                console.log("Selected: Us cooking together")
-              }}
+              onClick={() => router.push("/cooking-together")}
               className="bg-pink-500 hover:bg-pink-400 transition px-8 py-8 rounded-xl text-xl font-bold transform hover:scale-105"
             >
               <span className="text-2xl block mb-2">👩‍🍳👨‍🍳</span>
