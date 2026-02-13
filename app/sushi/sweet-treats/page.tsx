@@ -42,7 +42,7 @@ export default function SushiSweetTreatsPage() {
         animate={{ opacity: 1, y: 0 }}
         className="fixed top-0 left-0 right-0 w-full py-16 px-4 text-center shadow-2xl z-50"
         style={{
-          backgroundImage: "url('/IMG_4975.jpg')",
+          backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/IMG_4975.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
