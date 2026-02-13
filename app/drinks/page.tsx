@@ -4,8 +4,10 @@ import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
-export default function MenuPage() {
+export default function DrinksPage() {
   const router = useRouter()
+  const [drinkPreference, setDrinkPreference] = useState("")
+  const [submitted, setSubmitted] = useState(false)
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {
@@ -56,49 +58,45 @@ export default function MenuPage() {
         <p className="text-pink-100 text-lg mt-6 font-bold">March 1st will be here soon!</p>
       </motion.div>
       <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-80">
-        <div className="flex-1 flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="text-center space-y-6"
-          >
-            <h1 className="text-4xl font-bold">
-              Pick Your Dinner
-            </h1>
-            <p className="text-pink-400 text-xl">What should we do for dinner?</p>
-
-            <div className="grid grid-cols-3 gap-6 mt-8">
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                onClick={() => router.push("/sushi")}
-                className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
+        <div className="flex-1 flex items-center justify-center w-full px-4">
+          {!submitted ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center space-y-6 max-w-xl w-full"
+            >
+              <h1 className="text-4xl font-bold">But first...</h1>
+              <p className="text-2xl text-pink-300">Would drinks interest you?</p>
+              <p className="text-gray-300 text-lg">Tell me what you'd like to drink, or if you can't decide, that's okay - I'll have a bottle of wine for us 🍷</p>
+              <textarea
+                value={drinkPreference}
+                onChange={(e) => setDrinkPreference(e.target.value)}
+                className="w-full h-32 p-3 rounded-lg text-black text-base resize-none"
+                placeholder=""
+              />
+              <button
+                onClick={() => setSubmitted(true)}
+                className="bg-pink-500 px-8 py-3 rounded-xl hover:bg-pink-400 transition font-bold text-lg"
               >
-                Sushi 🍣
-              </motion.button>
-
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                onClick={() => router.push("/cooking")}
-                className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
+                Let's Move On
+              </button>
+            </motion.div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="text-center space-y-6"
+            >
+              <h2 className="text-3xl font-bold text-pink-400">Perfect!</h2>
+              <p className="text-xl text-gray-300">Now let's pick what we're doing for dinner...</p>
+              <button
+                onClick={() => router.push("/menu")}
+                className="bg-pink-500 px-8 py-3 rounded-xl hover:bg-pink-400 transition font-bold text-lg mt-6"
               >
-                Cooking 👨‍🍳
-              </motion.button>
-
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                onClick={() => router.push("/picnic")}
-                className="bg-pink-500 hover:bg-pink-400 transition px-8 py-6 rounded-xl font-bold text-2xl"
-              >
-                Picnic 🧺
-              </motion.button>
-            </div>
-          </motion.div>
+                Choose Dinner
+              </button>
+            </motion.div>
+          )}
         </div>
       </main>
     </>
