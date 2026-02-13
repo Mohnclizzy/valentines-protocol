@@ -126,7 +126,7 @@ export default function CookingTogetherPage() {
               Should we try to bake as well?
             </h1>
             <p className="text-lg text-gray-300">
-              What should we bake together?
+              We already know what we're cooking together, but what should we bake?
             </p>
 
             <textarea
@@ -135,6 +135,16 @@ export default function CookingTogetherPage() {
               placeholder=""
               className="w-full h-48 p-4 rounded-xl text-black text-base bg-white"
             />
+
+            <button
+              onClick={() => {
+                setBaking("other sweet treat")
+                setSubmitted(true)
+              }}
+              className="w-full bg-gray-600 hover:bg-gray-500 transition px-6 py-3 rounded-xl font-bold text-lg"
+            >
+              Or other sweet treat...
+            </button>
 
             <button
               onClick={handleSubmit}
