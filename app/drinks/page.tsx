@@ -71,8 +71,8 @@ export default function DrinksPage() {
               <textarea
                 value={drinkPreference}
                 onChange={(e) => setDrinkPreference(e.target.value)}
-                className="w-full h-32 p-3 rounded-lg text-black text-base resize-none"
                 placeholder=""
+                className="w-full h-48 p-4 rounded-xl text-black text-base bg-white"
               />
               <button
                 onClick={() => setSubmitted(true)}
