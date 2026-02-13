@@ -5,7 +5,6 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
 export default function Home() {
-  const [started, setStarted] = useState(false)
   const [answer, setAnswer] = useState("")
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
   const router = useRouter()
@@ -60,7 +59,6 @@ export default function Home() {
       </motion.div>
       <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-80">
         <div className="flex-1 flex items-center justify-center">
-        {!started ? (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -75,7 +73,7 @@ export default function Home() {
               onChange={(e) => setAnswer(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                  if (answer.trim().toLowerCase() === "yes") setStarted(true)
+                  if (answer.trim().toLowerCase() === "yes") router.push("/itinerary")
                   else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
                 }
               }}
@@ -94,8 +92,7 @@ export default function Home() {
               </button>
             </div>
           </motion.div>
-        ) : (}
-      </div>
+        </div>
       </main>
     </>
   )

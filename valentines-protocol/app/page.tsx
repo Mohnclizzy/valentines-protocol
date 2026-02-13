@@ -5,7 +5,6 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
 export default function Home() {
-  const [started, setStarted] = useState(false)
   const [answer, setAnswer] = useState("")
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
   const router = useRouter()
@@ -60,7 +59,6 @@ export default function Home() {
       </motion.div>
       <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white mt-80">
         <div className="flex-1 flex items-center justify-center">
-        {!started ? (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -75,7 +73,7 @@ export default function Home() {
               onChange={(e) => setAnswer(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                  if (answer.trim().toLowerCase() === "yes") setStarted(true)
+                  if (answer.trim().toLowerCase() === "yes") router.push("/itinerary")
                   else alert("I KNOW I KNOW IM SORRY IM LATE BUT YOURE MY VALENTINES FOR THE REST OF OUR LIFE")
                 }
               }}
@@ -94,32 +92,7 @@ export default function Home() {
               </button>
             </div>
           </motion.div>
-        ) : (
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="text-center space-y-6"
-          >
-            <h2 className="text-3xl font-bold text-pink-400">
-              Hello my gorgeous wonderful beautiful pretty cute awesome hot sexy lady
-            </h2>
-            <p>
-              Make yo pick finnashawty
-            </p>
-          <div className="grid grid-cols-3 gap-4">
-            <button onClick={() => router.push("/sushi")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
-              Sushi 🍣
-            </button>
-            <button onClick={() => router.push("/cooking")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
-              Cooking Together 👨‍🍳
-            </button>
-            <button onClick={() => router.push("/picnic")} className="bg-pink-500 hover:bg-pink-400 transition px-6 py-4 rounded-xl font-bold text-lg">
-              Picnic
-            </button>
-          </div>
-        </motion.div>
-        )}
-      </div>
+        </div>
       </main>
     </>
   )
